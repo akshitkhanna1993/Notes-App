@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'add-note',
+    loadChildren: () => import('./add-note/add-note.module').then( m => m.AddNotePageModule)
+  },
+  {
+    path: 'view-note/:createdId',
+    loadChildren: () => import('./view-note/view-note.module').then( m => m.ViewNotePageModule)
+  },
 ];
 
 @NgModule({

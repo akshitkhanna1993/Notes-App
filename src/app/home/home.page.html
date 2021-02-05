@@ -1,20 +1,24 @@
+
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title  style="text-align: center;font-weight: 600;text-transform: capitalize;">
+     My Notes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding  class="main-content">
+<ion-list style="margin-top: 10px;" >
+  <ion-item  *ngFor="let note of notes | async"  (click)="navigateToViewtNote(note.createDate)" >
+    <label class="date">{{note.date | date:'shortDate' }}</label>
+  <button    class="title-btn"   >
+   {{note.title}} 
+  </button>
+</ion-item>
+</ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <button  class="add-btn"   (click)="addNote()">Add Note</button>
+  
+ 
 </ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title  style="text-align: center;font-weight: 600;">View Note</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content style="background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;">
+      <ion-card-title  style="font-weight: 600;font-size: 18px;color: #12298B;" >
+        {{note &&  note.title}}
+      </ion-card-title>
+      <div class="note-date">  <label class="date"  > {{note && note.date | date:'longDate' }}  </label> </div>
+      <hr/>
+      <div><p  class="content">{{ note && note.content}}</p></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <button   class="delete-btn"  block (click)="deleteNote(note.createDate)">Delete</button>
+</ion-footer>

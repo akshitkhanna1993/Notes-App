@@ -1,0 +1,50 @@
+
+.save-btn{
+    border:1px solid;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+  
+  ion-content{
+    --background: url('../../assets/images/pexels-lukas-317356.jpg') no-repeat center fixed;
+    background-size: cover;
+    &::before {
+      content:'';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      opacity: 3;
+    }
+  
+  }
+  
+  .date{
+    font-weight: 600;
+    color: #4A5DAD;
+    padding-right: 24px;
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+
+  .content {
+    font-weight: 600;
+    color: #3B3064;
+    padding-right: 24px;
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+  
+
+  .delete-btn{
+      background-color: #C12042;
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: sans-serif;
+  }
+  
